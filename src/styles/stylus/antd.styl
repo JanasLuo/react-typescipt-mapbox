@@ -1,0 +1,137 @@
+@import '~src/styles/stylus/_variables.styl'
+
+:global
+  .ant-select
+    border 2px solid $border-color
+    color #FFFFFF
+    height 46px
+    line-height 46px
+    width 100%
+    margin-bottom 24px
+
+    .anticon
+      color rgba(0, 240, 239, 0.52)
+      font-size 14px
+
+    .ant-select-selection--single, .ant-select-selection__rendered
+      height 46px
+      line-height 46px
+
+      .ant-select-selection-selected-value
+        font-size 16px
+
+    &:after
+      position absolute
+      bottom -2px
+      left -2px
+      content ''
+      width 8px
+      height 4px
+      background $blue
+
+    &:before
+      position absolute
+      bottom -2px
+      right -2px
+      content ''
+      width 8px
+      height 4px
+      background $blue
+
+    .ant-select-selection
+      &:after
+        position absolute
+        top -2px
+        left -2px
+        content ''
+        width 8px
+        height 4px
+        background $blue
+
+      &:before
+        position absolute
+        top -2px
+        right -2px
+        content ''
+        width 8px
+        height 4px
+        background $blue
+
+  .ant-pagination
+    .ant-pagination-prev, .ant-pagination-next, .ant-pagination-jump-prev, .ant-pagination-jump-next, .ant-pagination-item
+      min-width 40px
+      height 40px
+      line-height 40px
+      background transparent
+      border 2px solid rgba(204, 219, 255, 0.32)
+      // font-weight 500
+      font-size 18px
+      color rgba(255, 255, 255, 0.7)
+
+      &>a
+        background transparent
+
+    .ant-pagination-jump-next-custom-icon
+      border 0
+
+      .ant-pagination-item-ellipsis
+        color rgba(255, 255, 255, 0.5) !important
+
+    .ant-pagination-item-active
+      border 2px solid #00F0EF
+      background transparent
+      color #fff
+
+    .ant-pagination-item.ant-pagination-item-active > a
+      background transparent
+
+    .ant-pagination-item:hover > a
+      background $border-color
+
+    .ant-pagination-options-quick-jumper
+      color #FFFFFF
+      font-size 16px
+
+      input
+        border 2px solid rgba(204, 219, 255, 0.32)
+        background transparent
+        color #fff
+
+  .ant-select-dropdown
+    background-color $background-list
+
+    .ant-select-dropdown-menu-item
+      background-color $background-light
+
+      &:hover
+        background-color $blue
+
+    .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled)
+      background-color $blue
+
+  .ant-input
+    background rgba(107, 200, 250, 0.1)
+    border 2px solid rgba(107, 200, 250, 0.4)
+    font-size 16px
+    height 40px
+    line-height 40px
+
+    &:focus, &:active
+      border-color rgba(0, 240, 239, 0.38)
+      box-shadow none
+
+  .ant-pagination
+    margin 16px 0
+    display inline-block
+    position relative
+    left 50%
+    transform translateX(-50%)
+
+  .location-model
+    .ant-modal-content
+      height 80%
+
+      .ant-modal-body
+        height calc(100% - 50px)
+        padding 0
+        box-sizing border-box

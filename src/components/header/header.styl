@@ -1,0 +1,67 @@
+@import '~src/styles/stylus/_variables.styl'
+@import '~src/styles/stylus/_mixins.styl'
+
+.header
+  width 100%
+  height 106px
+  display flex
+  position relative
+  z-index 100
+  justify-content space-between
+
+  :global .left-box
+    display flex
+    margin 30px
+    height 40px
+    // border 1px solid rgba(0, 240, 239, 0.32)
+    color #fff
+    line-height 40px
+    text-align center
+    cursor pointer
+
+    > div
+      width 92px
+      height 100%
+      font-size 16px
+
+      &.active
+        background rgba(0, 240, 239, 0.48)
+        font-weight bold
+
+  :global .right-box
+    display flex
+    margin 30px 16px
+
+    .name
+      font-weight bold
+      font-size 16px
+      color #ffffff
+      line-height 44px
+      margin-right 10px
+
+    .dept
+      font-size 14px
+      color rgba(255, 255, 255, 0.7)
+      line-height 44px
+      position relative
+      padding-right 10px
+
+      &:after
+        content ''
+        position absolute
+        width 2px
+        height 16px
+        background rgba(204, 219, 255, 0.32)
+        right 0
+        top 14px
+
+    .police
+      width 44px
+      height 44px
+      margin-right 10px
+
+    .out
+      width 24px
+      height 24px
+      margin-left 10px
+      margin-top 10px

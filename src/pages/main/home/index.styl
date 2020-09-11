@@ -1,0 +1,77 @@
+.homepage
+  width 100%
+  height 100%
+  background-size 100% 100%
+  background-repeat no-repeat
+  background-image url('../../../assets/yujing/homepage-bg.png')
+  position relative
+
+  :global
+    #container123
+      height calc(100% - 110px)
+      width 100%
+
+    .bottom
+      position absolute
+      bottom 0
+      left 0
+
+    @keyframes dong
+      0%
+        transform translate(0px, 0px)
+
+      50%
+        transform translate(0px, -10px)
+
+      100%
+        transform translate(0px, 0px)
+
+    @keyframes dong2
+      0%
+        transform translate(0px, 0px)
+
+      50%
+        transform translate(0px, 15px)
+
+      100%
+        transform translate(0px, 0px)
+
+    .jump
+      position absolute
+      cursor pointer
+
+      &:hover
+        background-size 100% 100%
+        background-repeat no-repeat
+        background-image url('../../../assets/yujing/homepage-hover.svg')
+        animation none
+
+    .jump1
+      position absolute
+      top 136px
+      left 167px
+      animation dong 3s infinite
+
+    .jump2
+      position absolute
+      top 374px
+      left 489px
+      animation dong2 3s infinite
+
+    .jump3
+      position absolute
+      top 136px
+      left 811px
+      animation dong 3s infinite
+
+    .jump4
+      position absolute
+      top 374px
+      left 1133px
+      animation dong2 3s infinite
+
+    .jump5
+      position absolute
+      top 136px
+      left 1455px
+      animation dong 3s infinite

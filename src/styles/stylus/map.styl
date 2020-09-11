@@ -1,0 +1,211 @@
+@import '~src/styles/stylus/_variables.styl'
+@import '~src/styles/stylus/_mixins.styl'
+
+:global .situation-show-circle
+  position relative
+
+  img
+    display block
+    margin 0 auto
+    animation myfirst 1.5s infinite
+
+  .area-name
+    background rgba(4, 30, 40, 0.8)
+    padding 0 12px
+    font-size 16px
+    line-height 26px
+    border 2px solid #FF9431
+
+  .info-box
+    position absolute
+    bottom 36px
+    left -163px
+
+  // padding-top 40px
+  // padding-left 46px
+  // font-size 16px
+
+  // .title
+  // font-weight bold
+  // font-size 16px
+  // line-height 26px
+  // margin-bottom 10px
+
+  // span
+  // color $blue
+  // font-weight 600
+  // margin-left 10px
+  .info-box
+    display none
+
+  .picker-hover-show:hover
+    .info-box
+      display block
+
+  @keyframes myfirst
+    10%
+      transform scale(1.2)
+
+    20%
+      transform scale(2)
+
+    40%
+      transform scale(3)
+
+    60%
+      transform scale(4)
+
+    80%
+      transform scale(6)
+
+    100%
+      transform scale(8)
+
+  .mapinfo-warning
+    .map-info
+      // width: 570px;
+      width 480px
+      height 351px
+      background url('../../assets/mapimg/map-info.svg') no-repeat
+      background-size 100% 100%
+      box-sizing border-box
+      position relative
+      padding 44px 28px 64px
+
+      .mapinfo-close
+        position absolute
+        right 30px
+        top 45px
+        width 36px
+        height 32px
+        background url('../../assets/mapimg/mapinfo-close.svg') no-repeat
+        background-size 100% 100%
+        cursor pointer
+
+      .mapinfo-content
+        display flex
+        flex-direction column
+
+        .content-top
+          height 112px
+          flex-shrink 0
+          display flex
+          margin-bottom 18px
+
+          .content-imgs
+            display flex
+            margin-right 20px
+
+            .content-img-item
+              width 84px
+              height 100%
+              border 1px solid rgba(0, 255, 242, 0.48)
+              box-sizing border-box
+              padding 4px
+
+              img
+                width 100%
+                height 100%
+
+            .content-vs
+              width 50px
+              box-sizing border-box
+              padding 4px
+              display flex
+              flex-direction column
+              justify-content center
+              align-items center
+
+              img
+                width 32px
+                height 20px
+
+              .content-percent
+                display flex
+                flex-direction column
+                align-items center
+                justify-content center
+                margin-top 8px
+                height 42px
+                width 42px
+                background url('../../assets/mapimg/bgimg-polygon.svg') no-repeat
+                background-size 100% 100%
+                padding-top 9px
+
+                .percent-text
+                  font-weight bold
+                  font-size 8px
+                  line-height 12px
+                  text-align right
+                  color #ffffff
+
+                .percent-num
+                  font-weight 900
+                  font-size 12px
+                  line-height 20px
+                  color #ffffff
+
+          .content-top-right
+            .person-name
+              font-weight bold
+              font-size 16px
+              line-height 26px
+              color white
+              margin-bottom 10px
+
+        .content-body
+          flex 1
+          display flex
+          flex-wrap wrap
+
+        .mapinfo-title
+          font-weight bold
+          font-size 16px
+          line-height 26px
+          color #ffffff
+          margin-bottom 6px
+
+        .mapinfo-item
+          width 50%
+          display flex
+          font-size 16px
+          line-height 26px
+          margin-bottom 8px
+
+          &.full-width
+            width 100%
+
+          .mapinfo-key
+            width 64px
+            flex-shrink 0
+            color #ffffff
+            margin-right 16px
+
+          .mapinfo-value
+            flex 1
+            font-weight bold
+            color #6bc8fa
+            text-overflow ellipsis
+            white-space nowrap
+            overflow hidden
+
+      .mapinfo-footer
+        display flex
+        justify-content center
+        margin-top 12px
+
+        .mapinfo-button
+          width 77px
+          height 36px
+          margin-left 17px
+          background-size 100% 100%
+          cursor pointer
+
+          &.view
+            background url('../../assets/mapimg/mapinfo-button-view.svg') no-repeat
+
+          &.playback
+            background url('../../assets/mapimg/mapinfo-button-playback.svg') no-repeat
+
+          &.handle
+            background url('../../assets/mapimg/button-handle.svg') no-repeat

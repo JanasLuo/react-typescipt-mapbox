@@ -1,0 +1,288 @@
+@import '~src/styles/stylus/_variables.styl'
+
+:global .root
+  width 100%
+  height 100%
+
+  .app
+    width 100%
+    height 100%
+
+    .spin-main
+      position fixed
+      width 100%
+      height 100%
+      top 0
+      background-color rgba(0, 0, 0, 0.4)
+      display flex
+      align-items center
+      justify-content center
+      z-index 9999
+
+    .loading-box
+      position fixed
+      display none
+      width 100%
+      height 100%
+      top 0
+      background-color rgba(0, 0, 0, 0.6)
+      align-items center
+      justify-content center
+      z-index 9999
+
+      &.show
+        display flex
+
+    .main
+      width 100%
+      height 100%
+      bg('big_bg.png')
+      color #ffffff
+
+      .main-body
+        position relative
+        width 100%
+        height calc(100% - 106px)
+
+        .menu-slide
+          position fixed
+          display none
+          width 100%
+          height 100%
+          top 0
+          background-color rgba(0, 0, 0, 0.4)
+          align-items center
+          justify-content center
+          z-index 9999
+
+          &.show
+            display flex
+
+        .main
+          width 100%
+          height 100%
+          bg('main_bg.jpg')
+
+          .ant-menu-dark .ant-menu-item
+            color red
+
+          .main-body
+            position relative
+            width 100%
+            height calc(100% - 106px)
+
+            .menu-slide
+              position fixed
+              top 10%
+              left 0
+              height 100%
+              width 20px
+              z-index 102
+
+            .left-menu
+              position absolute
+              width 200px
+              height calc(100% + 10px)
+              top -10px
+              z-index 100
+              overflow-x hidden
+              transition 500ms
+              background-color #132C68
+              box-shadow 0 1px 19px 0 rgba(9, 165, 248, 0.45) inset
+
+              &.unexpand
+                transform translateX(-200px)
+
+              .ant-menu
+                width 100%
+                height 100%
+                background-color transparent
+
+                .menu-name
+                  margin-left -10px
+
+                &.ant-menu-sub
+                  background-color #061643
+                  background #061643
+
+                  .menu-name
+                    margin-left -20px
+
+        .right-body
+          position relative
+          width 100%
+          height 100%
+          z-index 100
+
+          .main-route
+            width 100%
+            height 100%
+            overflow hidden
+
+:global
+  .page-padding
+    padding 15px 50px
+    box-sizing border-box
+    height 100%
+
+  .content-padding
+    padding 25px 32px
+    box-sizing border-box
+    background rgba(10, 73, 143, 0.72)
+    // margin-top 24px
+    position relative
+
+  .white-space
+    text-overflow ellipsis
+
+  .btn-style
+    height 28px
+    line-height 28px
+    font-weight 600
+    font-size 14px
+    color $blue-number
+    background-color $background-light
+    text-align center
+    padding 0 12px
+    border-left 1px solid rgba(33, 191, 242, 0.38)
+    border-right 1px solid rgba(33, 191, 242, 0.38)
+
+  .list-page-height
+    height calc(100% - 140px)
+
+    .search-date-container
+      display flex
+      height 60px
+
+      .search-topbar-container
+        width calc(100% - 360px)
+
+      .search-date-box
+        position relative
+        top -15px
+        padding-left 40px
+        flex-basis 360px
+        border-bottom 1px solid rgba(0, 240, 239, 0.32)
+        margin-bottom 10px
+
+  .corner-top-left
+    position absolute
+    left 0
+    top 0
+
+  .corner-bottom-right
+    position absolute
+    right 0
+    bottom 0
+
+  .mapbg-img
+    position absolute
+    top 248px
+    left 461px
+    width 1050px
+
+  .button-zh-back
+    display inline-block
+    padding 0 20px
+    font-weight bold
+    font-size 16px
+    line-height 38px
+    height 38px
+    background rgba(107, 200, 250, 0.16)
+    border-left 2px solid rgba(0, 177, 184, 0.38)
+    border-right 2px solid rgba(0, 177, 184, 0.38)
+    cursor pointer
+
+    img
+      margin-right 10px
+      width 19px
+      height 19px
+      vertical-align text-bottom
+
+  .row-helf-box
+    display flex
+    height calc(100% - 32px)
+
+    .today
+      width 396px
+
+  .back-content
+    display flex
+    line-height 38px
+    font-size 16px
+    margin-bottom 22px
+
+    &>img
+      width 21px
+      height 21px
+      margin 8px 10px 0 26px
+
+    .route-list
+      &>div
+        font-size 16px
+        line-height 38px
+        cursor pointer
+
+  .search-box
+    // padding 32px 40px 8px 40px
+    // background  rgba(10, 73, 143, 0.72)
+    // border 2px solid rgba(0, 240, 239, 0.32)
+
+  .search-input-box
+    display flex
+
+    .search-confirm
+      width 48px
+      height 40px
+      line-height 40px
+      background $blue
+      padding-left 12px
+      margin-left 8px
+
+:global .arrow-title
+  display flex
+  justify-content space-between
+  margin-top 24px
+
+  &>div
+    display flex
+    font-size 28px
+    line-height 36px
+    color #F0FBFE
+
+    &>p
+      font-size 28px
+      margin-left 16px
+
+  &>p
+    color rgba(240, 251, 254, 0.8)
+    font-size 16px
+    line-height 36px
+    font-weight bold
+
+:global
+  .top-level
+    position fixed
+    left 506px
+    top 120px
+    z-index 100
+    background rgba(5, 24, 49, 0.8)
+    height 68px
+    line-height 68px
+    font-weight bold
+    font-size 28px
+    padding 0 24px
+
+    &>span
+      cursor pointer
+
+    &>.active
+      color #6BC8FA
+
+    &.data-top
+      left 365px
+      top 131px
+
+    &.top-monitor
+      left 390px
+      top 122px
