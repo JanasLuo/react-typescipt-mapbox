@@ -14,6 +14,10 @@ const Home = Loadable({
   loader: () => import('./home/index'),
   loading: LoadableLoading
 })
+const Map = Loadable({
+  loader: () => import('./map/index'),
+  loading: LoadableLoading
+})
 
 class MainRoute extends React.Component<any, {}> {
   constructor(props: any) {
@@ -31,6 +35,7 @@ class MainRoute extends React.Component<any, {}> {
         >
           <Switch location={location}>
             <Route path="/main/home" component={Home} />
+            <Route path="/main/map" component={Map} />
             <Route path="/main/404" component={notFound} />
             <Redirect to="/main/404" />
           </Switch>

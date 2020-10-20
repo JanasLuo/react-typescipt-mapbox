@@ -1,6 +1,6 @@
 // const target = require('./target')
 // const target = "http://nginx-nc"
-const targetmap = "http://nginx-nc"
+const targetmap = "http://39.106.114.130"
 const target = "http://192.168.2.100:8081"
 module.exports = {
   "/api": {

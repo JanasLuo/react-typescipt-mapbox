@@ -47,7 +47,7 @@ class Mapbox extends React.Component {
     mapboxgl.accessToken = mapStore.accessToken
     // mapStore.pitch
     console.log(mapStore, 'mapstroe', mapStore.mapstate)
-    mapStore.mapstate.center = Bean.CENTER
+    // mapStore.mapstate.center = Bean.CENTER
     // mapStore.mapstate.pitch = 45
     const f = {
       minZoom: 8,

@@ -63,7 +63,7 @@ export class MapStore {
         sources: {
           'raster-tiles': {
             type: 'raster',
-            tiles: ['/darkblue/tiles/{z}/{x}/{y}.png'],
+            tiles: ['/darkblue/tiles/{z}/{x}/{y}.jpg'],
             tileSize: 256
           }
         },
@@ -78,18 +78,18 @@ export class MapStore {
         ]
       },
       // attributionControl: false,
-      zoom: 9.285782070032383,
-      center: null,
+      zoom: 12,
+      center: [114.30385832, 30.64797001],
       maxZoom: 17, // 实际可见到18级
       minZoom: 9
     }
     this.viewport = {
       width: document.documentElement.clientWidth,
       height: document.documentElement.clientHeight,
-      longitude: 0,
-      latitude: 0,
+      longitude: 114.30385832,
+      latitude: 30.64797001,
       zoom: 12,
-      minZoom: 9.285782070032383,
+      minZoom: 9,
       maxZoom: 17 // 实际可见到18级
       // pitch: 0,
       // pitchWithRotate: false,
